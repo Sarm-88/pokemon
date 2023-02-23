@@ -27,3 +27,6 @@ async function getPokemon() {
 
 // getPokemon("pikachu")
 btn.addEventListener("click", getPokemon)
+input.addEventListener("submit", (event) => {
+    console.log("Hello")
+})

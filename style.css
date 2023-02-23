@@ -27,14 +27,33 @@ svg {
 }
 
 body {
-	background-color: black;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: white;
+	background: linear-gradient(
+		45deg,
+		hsl(269, 21%, 24%),
+		hsl(308, 9%, 36%),
+		hsl(351, 3%, 52%)
+	);
+	background-size: 400% 400%;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 		sans-serif;
+	animation: move 15s ease infinite;
+	color: hsl(75, 13%, 76%);
+}
+
+@keyframes move {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .container {
@@ -44,32 +63,28 @@ body {
 	align-items: center;
 	text-align: center;
 	gap: 1rem;
-	background: linear-gradient(
-		0deg,
-		rgba(138, 50, 9, 0.774) 0%,
-		rgba(10, 10, 10, 1) 100%
-	);
 	padding: 2rem;
 	border-radius: 1rem;
 	max-width: min-content;
+	background: linear-gradient(220deg, hsl(308, 9%, 36%), hsl(269, 21%, 24%));
 }
 
 button {
 	padding: 0.5rem 1rem;
 	border-radius: 1rem;
 	border: none;
-	background-color: white;
 	transition: 200ms ease;
+	color: hsl(269, 21%, 24%);
+	background-color: hsl(75, 13%, 76%);
 }
 
-button:hover {
-	background-color: rgba(138, 50, 9, 0.774);
-	color: white;
-}
+/* button:hover {
+} */
 
 input {
 	padding: 0.5rem 1rem;
 	border-radius: 1rem;
 	border: none;
-	background-color: white;
+	color: hsl(269, 21%, 24%);
+	background-color: hsl(75, 13%, 76%);
 }
