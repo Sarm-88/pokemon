@@ -26,6 +26,16 @@ svg {
 	image-rendering: pixelated;
 }
 
+::selection {
+	background-color: hsl(75, 13%, 76%);
+	color: hsl(269, 21%, 24%);
+}
+
+input::selection {
+	background-color: hsl(269, 21%, 24%);
+	color: hsl(75, 13%, 76%);
+}
+
 body {
 	height: 100vh;
 	display: flex;
@@ -67,19 +77,29 @@ body {
 	border-radius: 1rem;
 	max-width: min-content;
 	background: linear-gradient(220deg, hsl(308, 9%, 36%), hsl(269, 21%, 24%));
+	box-shadow: 10px 10px 50px hsl(0 0% 0% / 25%);
 }
 
 button {
 	padding: 0.5rem 1rem;
 	border-radius: 1rem;
-	border: none;
+	border: 2px solid transparent;
 	transition: 200ms ease;
 	color: hsl(269, 21%, 24%);
 	background-color: hsl(75, 13%, 76%);
+	outline: none;
 }
 
-/* button:hover {
-} */
+button:active {
+	transform: translateY(2px);
+}
+
+button:hover,
+button:focus {
+	border: 2px solid hsl(75, 13%, 76%);
+	background-color: hsl(0 0% 0% / 0);
+	color: hsl(75, 13%, 76%);
+}
 
 input {
 	padding: 0.5rem 1rem;
@@ -87,4 +107,5 @@ input {
 	border: none;
 	color: hsl(269, 21%, 24%);
 	background-color: hsl(75, 13%, 76%);
+	outline: none;
 }
